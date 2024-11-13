@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.burgershopmanagement.HelloController">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="300.0">
+            <children>
+                <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="white-form" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="24.0" layoutY="36.0" styleClass="head-label" stylesheets="@Style.css" text="Login Account">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <PasswordField layoutX="42.0" layoutY="151.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="text-field" stylesheets="@Style.css" />
+                        <Button layoutX="42.0" layoutY="220.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@Style.css" text="Login" />
+                        <TextField layoutX="41.0" layoutY="104.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="text-field" stylesheets="@Style.css" />
+                        <Hyperlink layoutX="40.0" layoutY="189.0" text="Forgot Password" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane fx:id="si_loginForm" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="white-form" stylesheets="@Style.css">
+                            <children>
+                                <Label layoutX="24.0" layoutY="36.0" styleClass="head-label" stylesheets="@Style.css" text="Login Account">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="si_password" layoutX="42.0" layoutY="151.0" onAction="#loginBtn" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="text-field" stylesheets="@Style.css" />
+                                <Button fx:id="si_loginBtn" layoutX="42.0" layoutY="220.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@Style.css" text="Login" />
+                                <TextField fx:id="si_username" layoutX="41.0" layoutY="104.0" onAction="#loginBtn" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="text-field" stylesheets="@Style.css" />
+                                <Hyperlink fx:id="si_forgotPass" layoutX="40.0" layoutY="189.0" text="Forgot Password" />
+                                <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="10.0" layoutY="104.0">
+                                    <image>
+                                        <Image url="@Img/user.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="10.0" layoutY="151.0">
+                                    <image>
+                                        <Image url="@Img/padlock.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="su_signupForm" prefHeight="400.0" prefWidth="300.0" styleClass="white-form" stylesheets="@Style.css">
+                            <children>
+                                <Label layoutX="24.0" layoutY="36.0" styleClass="head-label" stylesheets="@Style.css" text="Register Account">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="su_password" layoutX="42.0" layoutY="151.0" onAction="#regBtn" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="text-field" stylesheets="@Style.css" />
+                                <Button fx:id="su_signupBtn" layoutX="40.0" layoutY="285.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@Style.css" text="Sign Up" />
+                                <TextField fx:id="su_username" layoutX="41.0" layoutY="104.0" onAction="#regBtn" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="text-field" stylesheets="@Style.css" />
+                                <ComboBox fx:id="su_question" layoutX="42.0" layoutY="191.0" onAction="#regBtn" prefHeight="30.0" prefWidth="220.0" promptText="Question" styleClass="text-field" stylesheets="@Style.css" />
+                                <TextField fx:id="su_answer" layoutX="42.0" layoutY="229.0" onAction="#regBtn" prefHeight="30.0" prefWidth="220.0" promptText="Answer" styleClass="text-field" stylesheets="@Style.css" />
+                                <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="10.0" layoutY="151.0">
+                                    <image>
+                                        <Image url="@Img/padlock.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="10.0" layoutY="104.0">
+                                    <image>
+                                        <Image url="@Img/user.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="side_form" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="side_createBtn" layoutX="34.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="220.0" styleClass="create-btn" stylesheets="@Style.css" text="Create new Account" />
+                        <Button fx:id="side_alreadyHave" layoutX="34.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="220.0" styleClass="create-btn" stylesheets="@Style.css" text="Already have an Account" visible="false" />
+                        <Label layoutX="76.0" layoutY="293.0" text="Create Account" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="126.0" fitWidth="151.0" layoutX="69.0" layoutY="74.0">
+                            <image>
+                                <Image url="@Img/burger(1).png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="37.0" layoutY="190.0" text="Burger Shop Management System" textFill="WHITE">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
